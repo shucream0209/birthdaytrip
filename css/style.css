@@ -1,0 +1,271 @@
+@charset "UTF-8" ;
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+} 
+
+:root {
+  /* 色管理用の変数 */
+  --black-color: #333;
+  --white-color: #fff;
+  --gray-color: #aaa;
+  --gray-color02: #f8f2e5;
+  --gray-color03: #fcf8eb;
+  --primary-color: #226cb6;
+  --accent-color: hsl(348, 67%, 77%)
+   ;
+}
+
+:root {
+  /* コンテンツ幅管理用の変数 */
+  --content-width-sm: 800px;
+  --content-width: 960px;
+  --content-width-lg: 1088px;
+}
+
+:root {
+  /* z-index管理用の変数 */
+  --z-index-back: -1;
+  --z-index-default: 1;
+  --z-index-header: 100;
+  --z-index-menu: 150;
+  --z-index-modal: 200;
+}
+
+/* ---------- base ---------- */
+body {
+  color: var(--black-color);
+  font-size: 16px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- utility ---------- */
+
+/* ---------- layout ---------- */
+.l_container-sm,
+.l_container,
+.l_container-lg {
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.l_container-sm {
+  max-width: calc(var(--content-width-sm) + 32px);
+}
+
+.l_container {
+  max-width: calc(var(--content-width) + 32px);
+}
+
+.l_container-lg {
+  max-width: calc(var(--content-width-lg) + 32px);
+}
+
+.l_contents {
+  padding: 120px 0;
+}
+/* ---------- module ---------- */
+.m_footer {
+  background: var(--gray-color03);
+}
+
+.m_footer-txt {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-color);
+  padding: 16px 0 36px;
+}
+
+/* ---------- top ---------- */
+.l_header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-header);
+  background-color: transparent;
+  color: var(--white-color);
+  box-shadow: 2px 2px 10px var(--black-color);
+  background: linear-gradient(rgba(51, 51, 51, 0.4), rgba(51, 51, 51, 0.4)),
+  url(../img/image.png) ;
+}
+
+.l_header-logo {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 16px;
+  text-shadow: 2px 1px 1px var(--black-color);
+}
+
+.l_header-nav_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  gap: 16px;
+  margin: 8px 0;
+  overflow: scroll;
+}
+
+.top_kv {
+  height: 560px;
+  object-fit: cover;
+  background: linear-gradient(rgba(51, 51, 51, 0.4), rgba(51, 51, 51, 0.4)),
+  url(../img/image.png) center top / cover;
+  position: relative;
+}
+
+
+.top_kv_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.top_kv_copy {
+  width: 343px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--white-color);
+  letter-spacing: 2px;
+}
+
+.top_kv_text {
+  color: var(--white-color);
+  text-align: center;
+}
+ 
+.l_top_content {
+  background: var(--gray-color02);
+}
+
+.top_wrap-ttl {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 32px;
+  color: var(--primary-color);
+}
+
+.top_name-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 36px;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px var(--white-color);
+}
+
+.top_member {
+  display: flex;
+  padding: 18px 0 100px;
+}
+
+.top_member-wrap:nth-child(2) {
+  margin-top: 20px;
+}
+
+.top_sch-wrap {
+  background: var(--gray-color03);
+}
+
+.top_sch-wrap:nth-child(2) {
+  background: var(--gray-color02);
+}
+
+.top_sch_date {
+  text-align: center;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 24px;
+  padding-top: 36px;
+  text-shadow: 1px 1px 1px var(--black-color);
+}
+
+.top_sch-table {
+  display: block;
+  padding: 16px 0 40px 0;
+}
+
+.top_sch-tr {
+  display: flex;
+  letter-spacing: 5px;
+  font-size: 18px;
+  position: relative;
+  margin-top: 8px;
+}
+
+
+.top_sch-th {
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
+.top_sch-td {
+padding-left: 160px;
+}
+
+.top_intro-wrap {
+  background: var(--gray-color02);
+}
+
+.top_intro-ttl {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--primary-color);
+  text-align: center;
+  padding-top: 32px;
+}
+
+.top_intro-food {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.top_intro-food__img {
+  border-radius: 50%;
+}
+
+.top_intro-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.top_food-txt {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top_food-content {
+  font-weight: bold;
+  color: var(--white-color);
+  width: 140px;
+  height: 40px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  box-shadow: 2px 2px 2px var(--gray-color);
+}
+/* ---------- service ---------- */
+
+/* ---------- case ---------- */
+
+/* ---------- company ---------- */
+
+/* ---------- contact ---------- */
+
